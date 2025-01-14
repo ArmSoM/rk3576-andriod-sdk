@@ -3,7 +3,7 @@
 ArmSom发布的产品都会有配套的linux和Android版本的SDK，默认存放在百度网盘里面，这里以armsom-cm5io为例来介绍如何获取SDK以及编译固件
 
 ## 获取SDK
-点击进入链接: [github]https://github.com/ArmSoM/rk3576-andriod-sdk/releases/tag/rk3576_Android14RKR6
+点击进入链接: [github](https://github.com/ArmSoM/rk3576-andriod-sdk/releases/tag/rk3576_Android14RKR6)
 将所有分区压缩包下载至pc端
 
 ## 解压SDK
