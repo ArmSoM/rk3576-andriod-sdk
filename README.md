@@ -32,17 +32,12 @@ lunch
 ./build.sh -AUKup
 ```
 
-:::tip 
-
 执行完lunch之后选择cm5io的userdebug版本
-:::
 
 
 ## 编译问题
 拿到SDK之后按照操作编译可能会遇到问题，可以在[论坛](https://forum.armsom.org/tag/sdk)提问或者查找已知问题
 
 
-:::tip 
 Linux系统的SDK操作可以参考armsom发布的博客：
 https://blog.csdn.net/nb124667390/category_12589795.html
-:::
