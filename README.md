@@ -1,43 +1,53 @@
+# ArmSoM-SDK Release Guide  
 
-# ArmSom-SDK 发布
-ArmSom发布的产品都会有配套的linux和Android版本的SDK，默认存放在百度网盘里面，这里以armsom-cm5io为例来介绍如何获取SDK以及编译固件
+ArmSoM provides Linux and Android SDKs for all its products. These SDKs are typically hosted on Baidu Netdisk. This guide uses the **ArmSoM-CM5IO** as an example to demonstrate how to obtain and compile the SDK firmware.  
 
-## 获取SDK
-点击进入链接: [github](https://github.com/ArmSoM/rk3576-andriod-sdk/releases/tag/rk3576_Android14RKR6)
-将所有分区压缩包下载至pc端
+---
 
-## 解压SDK
-件分区压缩包放在同一目录下，执行下面命令解压：
-```bash
-cat rk3576_android14.tar.bz2.a* | tar xj
-cd rk3576_android14
-```
+## **Obtaining the SDK**  
+Click the following link to access the SDK: [GitHub](https://github.com/ArmSoM/rk3576-andriod-sdk/releases/tag/rk3576_Android14RKR6)  
+Download all partition archives to your PC.  
 
-## 配置产品SDK
-上述SDK解压完成之后可以看到git提交记录：
+---
 
-这份SDK是RK3576通用的代码，可以针对sige5和cm5io构建出固件，在上述的固件链接中存放了关于cm5io的补丁，执行命令合并它
-```bash
-git am /path/to/your/patches/*.patch
-```
+## **Extracting the SDK**  
+Place all the partition archive files in the same directory and execute the following commands to extract them:  
 
-## 编译SDK
-拿到SDK之后按照下面的操作编译：
+```bash  
+cat rk3576_android14.tar.bz2.a* | tar xj  
+cd rk3576_android14  
+```  
 
-```
-source build/envsetup.sh
+---
 
-lunch
+## **Configuring the Product SDK**  
+After extracting the SDK, you can view the Git commit history.  
 
-./build.sh -AUKup
-```
+This SDK contains the general RK3576 code and can be used to build firmware for both **Sige5** and **CM5IO**. The firmware link mentioned above includes a patch specific to CM5IO. Apply the patch using the following command:  
 
-执行完lunch之后选择cm5io的userdebug版本
+```bash  
+git am /path/to/your/patches/*.patch  
+```  
 
+---
 
-## 编译问题
-拿到SDK之后按照操作编译可能会遇到问题，可以在[论坛](https://forum.armsom.org/tag/sdk)提问或者查找已知问题
+## **Compiling the SDK**  
+Once you have the SDK, compile it using the following steps:  
 
+```bash  
+source build/envsetup.sh  
 
-Linux系统的SDK操作可以参考armsom发布的博客：
-https://blog.csdn.net/nb124667390/category_12589795.html
+lunch  
+
+./build.sh -AUKup  
+```  
+
+After executing the `lunch` command, select the **userdebug version** for CM5IO.  
+
+---
+
+## **Compilation Issues**  
+If you encounter issues during the compilation process, you can seek help by posting questions or browsing known issues on the [forum](https://forum.armsom.org/tag/sdk).  
+
+For Linux SDK operations, refer to the blog published by ArmSoM:  
+[https://blog.csdn.net/nb124667390/category_12589795.html](https://blog.csdn.net/nb124667390/category_12589795.html)  
